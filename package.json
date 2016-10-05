@@ -23,6 +23,9 @@
     "lint": "eslint .",
     "record-fixtures": "NOCK_BACK_MODE=record npm test && npm run-script clean-fixtures",
     "start": "NODE_ENV=development nodemon",
-    "test": "NODE_ENV=test mocha -R dot test/**/test.*.js"
+    "test": "NODE_ENV=test mocha -R dot test/**/test.*.js",
+    "wrecord-fixtures": "SET NOCK_BACK_MODE=record && npm test && npm run-script clean-fixtures",
+    "wstart": "SET NODE_ENV=development && nodemon",
+    "wtest": "SET NODE_ENV=test && mocha -R dot test/**/test.*.js"
   }
 }
